@@ -7,11 +7,12 @@ name = "pypi"
 
 [packages]
 
+dj-database-url = "*"
 django = "*"
 django-dramatiq = "*"
 dramatiq = {extras = ["watch", "redis"]}
-dj-database-url = "*"
 gunicorn = "*"
+redis = "*"
 
 
 [dev-packages]
