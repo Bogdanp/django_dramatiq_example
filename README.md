@@ -21,3 +21,4 @@ django_dramatiq is licensed under Apache 2.0.  Please see
 
 [django_dramatiq]: https://github.com/Bogdanp/django_dramatiq
 [redis]: https://redis.io
+[license]: https://github.com/Bogdanp/django_dramatiq_example/blob/master/LICENSE
