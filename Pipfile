@@ -13,6 +13,7 @@ django-dramatiq = "*"
 dramatiq = {extras = ["watch", "redis"]}
 gunicorn = "*"
 redis = "*"
+"psycopg2" = "*"
 
 
 [dev-packages]
