@@ -10,5 +10,5 @@ def index(request):
         process_job.send(job.pk)
         return redirect("index")
     return render(request, "dashboard/index.html", {
-        "jobs": Job.objects.all(),
+        "jobs": Job.objects.order_by("-created_at").all(),
     })
