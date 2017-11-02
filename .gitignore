@@ -1,0 +1,7 @@
+/*.egg-info
+/.benchmarks
+/.cache
+/.coverage
+/db.sqlite3
+/htmlcov
+__pycache__

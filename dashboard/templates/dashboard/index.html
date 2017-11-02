@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>django_dramatiq example</title>
+  </head>
+  <body>
+    <h1>Jobs</h1>
+    {% if not jobs %}
+      <p>There are no known jobs.</p>
+    {% else %}
+      <table>
+        <tr>
+          <th>Type</th>
+          <th>Status</th>
+          <th>Date</th>
+        </tr>
+        {% for job in jobs %}
+          <tr>
+            <td>{{ job.type }}</td>
+            <td>{{ job.status }}</td>
+            <td>{{ job.created_at }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    {% endif %}
+
+    <h2>Submit a job</h2>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <label>Job type
+        <select name="type">
+          <option value="slow">Slow</option>
+          <option value="fast">Fast</option>
+        </select>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
