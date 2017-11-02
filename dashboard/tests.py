@@ -19,16 +19,15 @@ class TestJobProcessing(TransactionTestCase):
         self.worker.stop()
 
     def test_can_process_jobs(self):
-        # Given a pending Job
-        job = Job.objects.create(type=Job.TYPE_FAST)
-
-        # When I submit it for processing
-        process_job.send(job.pk)
+        # Given a web client
+        # When I submit a job
+        response = self.client.post("/", {"type": Job.TYPE_FAST})
+        self.assertEqual(response.status_code, 302)
 
         # And wait for the queue and workers to complete
         self.broker.join(process_job.queue_name)
         self.worker.join()
 
         # Then I expect the job's status to be "done"
-        job.refresh_from_db()
+        job = Job.objects.get()
         self.assertEqual(job.status, Job.STATUS_DONE)
