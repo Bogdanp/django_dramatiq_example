@@ -1,0 +1,20 @@
+{
+  "name": "django_dramatiq_example",
+  "description": "An example app demonstrating django_dramatiq.",
+  "repository": "https://github.com/Bogdanp/django_dramatiq_example",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "python manage.py migrate"
+  },
+  "formation": {
+    "web": {"quantity": 1},
+    "worker": {"quantity": 1}
+  },
+  "buildpacks": [
+    {"url": "heroku/python"}
+  ],
+  "addons": [
+    "heroku-redis",
+    "heroku-postgresql"
+  ]
+}
