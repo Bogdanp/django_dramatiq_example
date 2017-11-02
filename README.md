@@ -1,4 +1,6 @@
-# django_dramatiq_example [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+# django_dramatiq_example
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 An example app demonstrating [django_dramatiq][django_dramatiq].
 
