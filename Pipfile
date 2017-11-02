@@ -11,6 +11,7 @@ django = "*"
 django-dramatiq = "*"
 dramatiq = {extras = ["watch", "redis"]}
 dj-database-url = "*"
+gunicorn = "*"
 
 
 [dev-packages]
