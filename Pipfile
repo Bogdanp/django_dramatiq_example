@@ -14,6 +14,7 @@ dramatiq = {extras = ["watch", "redis"]}
 gunicorn = "*"
 redis = "*"
 "psycopg2" = "*"
+whitenoise = "*"
 
 
 [dev-packages]
