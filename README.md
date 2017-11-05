@@ -15,7 +15,7 @@ An example app demonstrating [django_dramatiq][django_dramatiq].
 
 ## License
 
-django_dramatiq is licensed under Apache 2.0.  Please see
+django_dramatiq_example is licensed under Apache 2.0.  Please see
 [LICENSE][license] for licensing details.
 
 
