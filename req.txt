@@ -1,0 +1,9 @@
+dj-database-url
+django
+django-dramatiq
+dramatiq[watch]
+dramatiq[redis]
+gunicorn
+redis
+psycopg2
+whitenoise
