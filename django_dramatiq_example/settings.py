@@ -12,7 +12,15 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import dj_database_url
 import redis
-import os
+import os, socket
+
+## getting the hostname by socket.gethostname() method
+hostname = socket.gethostname()
+## getting the IP address using socket.gethostbyname() method
+ip_address = socket.gethostbyname(hostname)
+redis_host=os.environ.get('REDIS_HOST', "test_redis")
+os.environ["REDIS_URL"] = f"redis://{redis_host}:6379/0"
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
